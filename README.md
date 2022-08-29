@@ -9,7 +9,7 @@ I hope you will be kind enough to give opinions on how to make it better.
 - CSS
 
 ## Live Version 🌍
-Here is a link to the deployed version of my responsive [portfolio website](https://abayomiolaoye.github.io/).
+Check the deployed version of my responsive portfolio website[here](https://abayomiolaoye.github.io/).
 Feel free to check it out and share your view about it.
 
 ## Getting Started 
@@ -33,9 +33,9 @@ Open your code editor, open the folder (cloned repo) and play around with the co
 
 👤 **Oluwatoyin Olaoye**
 
-- GitHub: [@MindPrepDev](https://github.com/MindPrepDev)
+- GitHub: [@AbayomiOlaoye](https://github.com/AbayomiOlaoye)
 - Twitter: [@olaoyeelijah](https://twitter.com/olaoyeelijah)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/oluwatoyin-olaoye-82880363/)
+- LinkedIn: [Oluwatoyin Olaoye](https://linkedin.com/in/oluwatoyinolaoye/)
 
 
 👤 **Usirusen Ikon**
