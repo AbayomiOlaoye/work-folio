@@ -56,6 +56,10 @@ ul {
   list-style-type: none;
 }
 
+.landing-page {
+  margin-top: 120px;
+}
+
 .container {
   width: 100%;
   padding: 1.5rem;
@@ -71,7 +75,7 @@ ul {
 .theme {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #7d73fc;
   letter-spacing: 0.35px;
   line-height: 4.25rem;
@@ -80,7 +84,7 @@ ul {
 
 .sub-theme {
   font-size: 2rem;
-  line-height: 2.75rem;
+  line-height: 2rem;
   color: #edecff;
   margin: 16px 0 50px 0;
 }
@@ -295,7 +299,7 @@ ul {
     padding: 1.5rem 7.5rem;
   }
 
-  .menu-icon {
+  .remove {
     display: none;
   }
 
@@ -362,7 +366,7 @@ ul {
   }
 
   .theme {
-    font-size: 3.625rem;
+    font-size: 2.5rem;
     line-height: 6.56rem;
   }
 
