@@ -35,7 +35,7 @@ body {
   }
   
   .link {
-    display: block;
+    display: none;
     background-image: url(./images/menu-bg-up.svg), url(./images/menu-bg-btm.svg);
     background-repeat: no-repeat;
     background-position: left 0 top 50px, right 0 bottom 0;
@@ -44,7 +44,8 @@ body {
     height: 100vh;
     background-color: #191765;
     top: 0;
-    margin-left: -21px;
+    margin-left: -24px;
+    right: -100%;
     padding: 76px 48px 76px 40px;
   }
   
@@ -52,6 +53,12 @@ body {
     position: absolute;
     right: 35px;
     cursor: pointer;
+    display: none;
+    transition: transform 0.5s ease-out;
+  }
+
+  .exit-icon:hover {
+    transform: scale(1.35);
   }
   
   .link li {
@@ -59,10 +66,16 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3rem;
+    cursor: pointer;
   }
   
   .link li a {
     font-size: 24px;
+    transition: color 0.5s ease-in-out;
+  }
+
+  .link li a:hover {
+    color: #5e42d7;
   }
 }
 
@@ -363,7 +376,7 @@ ul {
 
   .link a {
     font-size: 0.94rem;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   .link a:hover {
@@ -373,16 +386,16 @@ ul {
 
   ul.flex-row li:hover img {
     transform: rotate3d(1, 1, 1, 360deg);
-    transition: all 1.3s ease-out;
+    transition: all 0.5s ease-out;
   }
 
   ul.flex-row li:hover {
     transform: scale(1.09);
-    transition: all 1.3s ease-out;
+    transition: all 0.5s ease-out;
   }
 
   button {
-    transition: background-color 1s;
+    transition: background-color 0.2s;
   }
 
   button:hover {
