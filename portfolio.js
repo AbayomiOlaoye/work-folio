@@ -43,3 +43,44 @@ function menuControl() {
   MENU_BTN.addEventListener('click', menuAnimator);
 }
 document.addEventListener('DOMContentLoaded', menuControl);
+/* End of Menu Logic */
+
+// JavaScript Objects for project information and pop-ups
+const projectInfo = [
+  {
+    projectName: 'Multi-Post Stores',
+    projectSummary: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
+    projectFeaturedImage: './images/placeholder.png',
+    projectTechnologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    projectLiveLink: '#',
+    projectSourceRepo: '#',
+  },
+
+  {
+    projectName: 'Multi-Post Stores',
+    projectSummary: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
+    projectFeaturedImage: './images/placeholder.png',
+    projectTechnologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    projectLiveLink: '#',
+    projectSourceRepo: '#',
+  },
+
+  {
+    projectName: 'Multi-Post Stores',
+    projectSummary: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
+    projectFeaturedImage: './images/placeholder.png',
+    projectTechnologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    projectLiveLink: '#',
+    projectSourceRepo: '#',
+  },
+
+  {
+    projectName: 'Multi-Post Stores',
+    projectSummary: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
+    projectFeaturedImage: './images/placeholder.png',
+    projectTechnologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    projectLiveLink: '#',
+    projectSourceRepo: '#',
+  },
+];
+// End of Objects collection
