@@ -4,8 +4,7 @@ const EXIT_BTN = document.querySelector('.exit-icon');
 const NAV_LINK = document.querySelector('.link');
 const LINKS = document.querySelectorAll('.link li');
 
-document.addEventListener('DOMContentLoaded', menuControl);
-
+// Logic for flipping controls
 function menuControl() {
   MENU_BTN.addEventListener('click', () => {
     NAV_LINK.style.display = 'block';
@@ -18,28 +17,29 @@ function menuControl() {
   });
 
   LINKS.forEach((link) => {
-    link.addEventListener('click', () => NAV_LINK.style.display = 'none');
-    link.addEventListener('click', () => EXIT_BTN.style.display = 'none')
-  })
+    link.addEventListener('click', () => {
+      NAV_LINK.style.display = 'none';
+      EXIT_BTN.style.display = 'none';
+    });
+  });
+// -----End---------//
 
-  MENU_BTN.addEventListener('click', menuAnimator);
-  
   function menuAnimator() {
     let animate = null;
     let position = -100;
     clearInterval(animate);
-    animate = setInterval(slideIn, 2);
     // function for slideIn effect
     function slideIn() {
       if (position === 0) {
         clearInterval(animate)
       } else {
-        position++;
+        position += 1;
         NAV_LINK.style.right = `${position}%`;
       }
     }
+    animate = setInterval(slideIn, 2);
   }
+  // Calling Animator function
+  MENU_BTN.addEventListener('click', menuAnimator);
 }
-
-
-
+document.addEventListener('DOMContentLoaded', menuControl);

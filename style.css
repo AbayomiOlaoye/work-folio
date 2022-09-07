@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .link {
     display: none;
     background-image: url(./images/menu-bg-up.svg), url(./images/menu-bg-btm.svg);
@@ -48,7 +48,7 @@ body {
     right: -100%;
     padding: 76px 48px 76px 40px;
   }
-  
+
   .exit-icon {
     position: absolute;
     right: 35px;
@@ -60,7 +60,7 @@ body {
   .exit-icon:hover {
     transform: scale(1.35);
   }
-  
+
   .link li {
     display: flex;
     justify-content: space-between;
@@ -68,7 +68,7 @@ body {
     margin-bottom: 3rem;
     cursor: pointer;
   }
-  
+
   .link li a {
     font-size: 24px;
     transition: color 0.5s ease-in-out;
