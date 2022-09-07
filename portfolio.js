@@ -22,7 +22,7 @@ function menuControl() {
       EXIT_BTN.style.display = 'none';
     });
   });
-// -----End---------//
+  // -----End---------//
 
   function menuAnimator() {
     let animate = null;
@@ -35,7 +35,7 @@ function menuControl() {
       } else {
         position += 1;
         NAV_LINK.style.right = `${position}%`;
-      }
+      };
     }
     animate = setInterval(slideIn, 2);
   }
