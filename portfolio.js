@@ -48,39 +48,68 @@ document.addEventListener('DOMContentLoaded', menuControl);
 // JavaScript Objects for project information and pop-ups
 const projectInfo = [
   {
+    projectID: 'one',
     projectName: 'Multi-Post Stores',
     projectSummary: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
     projectFeaturedImage: './images/placeholder.png',
+    altText: 'project snapshot',
     projectTechnologies: ['css', 'html', 'bootstrap', 'Ruby'],
     projectLiveLink: '#',
     projectSourceRepo: '#',
   },
 
   {
+    projectID: 'two',
     projectName: 'Multi-Post Stores',
     projectSummary: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
     projectFeaturedImage: './images/placeholder.png',
+    altText: 'project snapshot',
     projectTechnologies: ['css', 'html', 'bootstrap', 'Ruby'],
     projectLiveLink: '#',
     projectSourceRepo: '#',
   },
 
   {
+    projectID: 'three',
     projectName: 'Multi-Post Stores',
     projectSummary: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
     projectFeaturedImage: './images/placeholder.png',
+    altText: 'project snapshot',
     projectTechnologies: ['css', 'html', 'bootstrap', 'Ruby'],
     projectLiveLink: '#',
     projectSourceRepo: '#',
   },
 
   {
+    projectID: 'four',
     projectName: 'Multi-Post Stores',
     projectSummary: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
     projectFeaturedImage: './images/placeholder.png',
+    altText: 'project snapshot',
     projectTechnologies: ['css', 'html', 'bootstrap', 'Ruby'],
     projectLiveLink: '#',
     projectSourceRepo: '#',
   },
 ];
 // End of Objects collection
+
+/* Helper functions for work-section framework*/
+function creatWorksCard(card) {
+  return `
+    <div class="pro ${card.projectID}">
+      <img src="${card.projectFeaturedImage}"
+      alt="${card.altText}"
+      class="placeholder">
+      <div class="briefs">
+        <h3 class="br-header">${card.projectName}</h3>
+        <p class="text">${card.projectSummary}</p>
+        <ul class="tech">
+          ${card.projectTechnologies.map(tech => `<li>${tech}</li>`).join('')}
+        </ul>
+        <button type="button" class="view robo-head">See Project</button>
+      </div>
+    </div>
+  `
+}
+
+document.querySelector('.work-folio').innerHTML = projectInfo.map(creatWorksCard).join('');
