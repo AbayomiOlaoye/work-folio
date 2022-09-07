@@ -31,11 +31,11 @@ function menuControl() {
     // function for slideIn effect
     function slideIn() {
       if (position === 0) {
-        clearInterval(animate)
+        clearInterval(animate);
       } else {
         position += 1;
         NAV_LINK.style.right = `${position}%`;
-      };
+      }
     }
     animate = setInterval(slideIn, 2);
   }
