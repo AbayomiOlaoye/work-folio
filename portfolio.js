@@ -104,11 +104,10 @@ const modalInformation = [
     projectLiveLink: '#',
     projectSourceRepo: 'https://www.github.com/AbayomiOlaoye/work-folio',
   },
-]
+];
 // End of Objects collection
 
 document.addEventListener('DOMContentLoaded', () => {
-
   /* Helper functions for work-section framework */
   function creatWorksCard(card) {
     return `
@@ -136,11 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Choose tech skills to display on appropriate screen
   function techSkills(stack) {
     if (stack.includes('Github')) {
-      return `
-      <li class="hide">${stack}</li>
-    `;
+      return `<li class="hide">${stack}</li>`;
     } else {
-     `<li>${stack}</li>`;
+      return `<li>${stack}</li>`;
     }
   }
 
