@@ -91,25 +91,80 @@ const projectInfo = [
     projectSourceRepo: '#',
   },
 ];
-// End of Objects collection
 
-/* Helper functions for work-section framework*/
-function creatWorksCard(card) {
-  return `
-    <div class="pro ${card.projectID}">
-      <img src="${card.projectFeaturedImage}"
-      alt="${card.altText}"
-      class="placeholder">
-      <div class="briefs">
-        <h3 class="br-header">${card.projectName}</h3>
-        <p class="text">${card.projectSummary}</p>
-        <ul class="tech">
-          ${card.projectTechnologies.map(tech => `<li>${tech}</li>`).join('')}
-        </ul>
-        <button type="button" class="view robo-head">See Project</button>
+// Create modal for project info
+const modalInformation = [
+  {
+    projectId: 'Modal menu',
+    projectName: ['Multi - Post stories', 'Multi-post story'],
+    projectSummaryD: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramble.",
+    projectSummaryM: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    projectFeaturedImage: ['./images/modal.svg', './images/mobile_modal.png'],
+    projectTechnologies: ['html', 'Ruby on rails', 'css', 'Github'],
+    projectLiveLink: '#',
+    projectSourceRepo: 'https://www.github.com/AbayomiOlaoye/work-folio',
+  },
+];
+// End of Objects collection
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* Helper functions for work-section framework*/
+  function creatWorksCard(card) {
+    return `
+      <div class="pro ${card.projectID}">
+        <img src="${card.projectFeaturedImage}"
+        alt="${card.altText}"
+        class="placeholder">
+        <div class="briefs">
+          <h3 class="br-header">${card.projectName}</h3>
+          <p class="text">${card.projectSummary}</p>
+          <ul class="tech">
+            ${card.projectTechnologies.map(tech => `<li>${tech}</li>`).join('')}
+          </ul>
+          <button type="button" class="view robo-head">See Project</button>
+        </div>
+      </div>
+    `
+  }
+  // Mapping objects for dynamic page loading
+  document.querySelector('.work-folio').innerHTML = projectInfo.map(creatWorksCard).join('');
+
+  // Destructuring projectName for all screen types:
+  const [mobile, desktop] = modalInformation[0].projectName;
+
+  // Choose tech skills to display on appropriate screen
+  function techSkills(stack) {
+    if (stack.includes('Github')) {
+      return  `
+      <li class="hide">${stack}</li>
+    `
+    } else {
+      return  `
+      <li>${stack}</li>
+    `
+    }
+  }
+
+  document.querySelector('.modalInfo').innerHTML = `
+    <div class="modal-container">
+      <div class="grp-header">
+        <h2 class="remove br-header">${mobile}</h2>
+        <h2 class="hide br-header">${desktop}</h2>
+        <img src="./images/icons/exit.svg"
+        class="exit-icon modal"
+        alt="close button">
+      </div>
+      <img src="${modalInformation[0].projectFeaturedImage[0]}" class="placeholder modal hide" alt="project snapshot">
+      <img src="${modalInformation[0].projectFeaturedImage[1]}" class="placeholder modal remove" alt="project snapshot">
+      <p class="text modal hide">${modalInformation[0].projectSummaryD}</p>
+      <p class="text modal remove">${modalInformation[0].projectSummaryM}</p>
+      <ul class="tech">
+        ${modalInformation[0].projectTechnologies.map(techSkills).join('')}
+      </ul>
+      <div class=grp-btn>
+        <button type="button" class="view robo-head modal">See Live <img src="./images/icons/go_live.svg" alt="view live page"></button>
+        <button type="button" class="view robo-head modal">See Source <img src="./images/icons/github.png" alt="check code on github"></button>
       </div>
     </div>
   `
-}
-
-document.querySelector('.work-folio').innerHTML = projectInfo.map(creatWorksCard).join('');
+});
