@@ -104,11 +104,12 @@ const modalInformation = [
     projectLiveLink: '#',
     projectSourceRepo: 'https://www.github.com/AbayomiOlaoye/work-folio',
   },
-];
+]
 // End of Objects collection
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* Helper functions for work-section framework*/
+  /* Helper functions for work-section framework */
   function creatWorksCard(card) {
     return `
       <div class="pro ${card.projectID}">
@@ -119,12 +120,12 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3 class="br-header">${card.projectName}</h3>
           <p class="text">${card.projectSummary}</p>
           <ul class="tech">
-            ${card.projectTechnologies.map(tech => `<li>${tech}</li>`).join('')}
+            ${card.projectTechnologies.map((tech) => `<li>${tech}</li>`).join('')}
           </ul>
           <button type="button" class="view robo-head">See Project</button>
         </div>
       </div>
-    `
+    `;
   }
   // Mapping objects for dynamic page loading
   document.querySelector('.work-folio').innerHTML = projectInfo.map(creatWorksCard).join('');
@@ -135,13 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Choose tech skills to display on appropriate screen
   function techSkills(stack) {
     if (stack.includes('Github')) {
-      return  `
+      return `
       <li class="hide">${stack}</li>
-    `
+    `;
     } else {
-      return  `
-      <li>${stack}</li>
-    `
+     `<li>${stack}</li>`;
     }
   }
 
@@ -166,5 +165,5 @@ document.addEventListener('DOMContentLoaded', () => {
         <button type="button" class="view robo-head modal">See Source <img src="./images/icons/github.png" alt="check code on github"></button>
       </div>
     </div>
-  `
+  `;
 });

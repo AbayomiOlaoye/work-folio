@@ -640,7 +640,7 @@ div.modal-container .tech li:nth-of-type(4) {
     width: 80%;
     height: auto;
     margin: 112px auto;
-    background: rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.1);
   }
 
   .grp-header {
