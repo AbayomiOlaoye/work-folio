@@ -135,10 +135,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Choose tech skills to display on appropriate screen
   function techSkills(stack) {
     if (stack.includes('Github')) {
-      return `<li class="hide">${stack}</li>`;
+      stack = `<li class="hide">${stack}</li>`;
     } else {
-      return `<li>${stack}</li>`;
+      stack = `<li>${stack}</li>`;
     }
+    return stack;
   }
 
   document.querySelector('.modalInfo').innerHTML = `
