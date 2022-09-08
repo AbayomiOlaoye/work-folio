@@ -166,22 +166,22 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `;
 
-  // Event Listener on all buttons (See project)
-  // document.querySelectorAll('.see-project').forEach((button) => {
-  //   button.addEventListener('click', () => {
-  //     MODAL_INFO.style.display = 'block';
-  //   });
-  // });
+//   Event Listener on all buttons (See project)
+  document.querySelectorAll('.see-project').forEach((button) => {
+    button.addEventListener('click', () => {
+      MODAL_INFO.style.display = 'block';
+    });
+  });
 
-  // document.querySelector('.exit-icon.modal').addEventListener('click', () => {
-  //   MODAL_INFO.style.display = 'none';
-  // });
+  document.querySelector('.exit-icon.modal').addEventListener('click', () => {
+    MODAL_INFO.style.display = 'none';
+  });
 
-  // // When the user clicks anywhere outside of the modal, close it
-  // window.addEventListener('click', (e) => {
-  //   if (e.target === MODAL_INFO) {
-  //     MODAL_INFO.style.display = 'none';
-  //   }
-  // });
-  //
+  // When the user clicks anywhere outside of the modal, close it
+  window.addEventListener('click', (e) => {
+    if (e.target === MODAL_INFO) {
+      MODAL_INFO.style.display = 'none';
+    }
+  });
+  
 });
