@@ -37,7 +37,7 @@ function menuControl() {
         NAV_LINK.style.right = `${position}%`;
       }
     }
-    animate = setInterval(slideIn, 2);
+    animate = setInterval(slideIn, 1);
   }
   // Calling Animator function
   MENU_BTN.addEventListener('click', menuAnimator);
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <ul class="tech">
             ${card.projectTechnologies.map((tech) => `<li>${tech}</li>`).join('')}
           </ul>
-          <button type="button" class="view robo-head">See Project</button>
+          <button type="button" class="see-project view robo-head">See Project</button>
         </div>
       </div>
     `;
@@ -142,7 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
     return stack;
   }
 
-  document.querySelector('.modalInfo').innerHTML = `
+  const MODAL_INFO = document.querySelector('.modalInfo');
+  MODAL_INFO.innerHTML = `
     <div class="modal-container">
       <div class="grp-header">
         <h2 class="remove br-header">${mobile}</h2>
@@ -164,4 +165,23 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   `;
+
+  // Event Listener on all buttons (See project)
+  // document.querySelectorAll('.see-project').forEach((button) => {
+  //   button.addEventListener('click', () => {
+  //     MODAL_INFO.style.display = 'block';
+  //   });
+  // });
+
+  // document.querySelector('.exit-icon.modal').addEventListener('click', () => {
+  //   MODAL_INFO.style.display = 'none';
+  // });
+
+  // // When the user clicks anywhere outside of the modal, close it
+  // window.addEventListener('click', (e) => {
+  //   if (e.target === MODAL_INFO) {
+  //     MODAL_INFO.style.display = 'none';
+  //   }
+  // });
+  //
 });
