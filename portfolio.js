@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `;
 
-//   Event Listener on all buttons (See project)
+  // Event Listener on all buttons (See project)
   document.querySelectorAll('.see-project').forEach((button) => {
     button.addEventListener('click', () => {
       MODAL_INFO.style.display = 'block';
@@ -183,5 +183,4 @@ document.addEventListener('DOMContentLoaded', () => {
       MODAL_INFO.style.display = 'none';
     }
   });
-  
 });
