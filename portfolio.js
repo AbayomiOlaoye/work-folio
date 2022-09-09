@@ -196,9 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
         error.textContent = "Please check and use lower case";
         error.style.color = 'red';
         event.preventDefault();
-        // setTimeout(() => {
-        //   error.textContent = "";
-        // }, 3000);
+        setTimeout(() => {
+          error.textContent = "";
+        }, 3000);
       } else {
         form.submit();
       }
