@@ -183,4 +183,71 @@ document.addEventListener('DOMContentLoaded', () => {
       MODAL_INFO.style.display = 'none';
     }
   });
+
+  // Form Validation
+  const form = document.querySelector('.form');
+  const email = document.querySelector('#email');
+  const error = document.querySelector('.error-index');
+
+  // Helper functions
+  document.querySelectorAll('button[type=submit]').forEach((submit) => {
+    submit.addEventListener('click', (event) => {
+      if (email.value.trim() !== email.value.toLowerCase()) {
+        error.textContent = 'Please check and use lower case';
+        error.style.color = 'red';
+        event.preventDefault();
+        setTimeout(() => {
+          error.textContent = '';
+        }, 3000);
+      } else {
+        form.submit();
+      }
+    });
+  });
+
+  // Setting up local storage to store user info
+  const fullName = document.getElementById('fullname');
+  const userInput = document.getElementById('textarea');
+  const firstName = document.getElementById('fname');
+  const lastName = document.getElementById('lname');
+  const inputs = document.querySelectorAll('.full');
+
+  // Define objects as variables for localStorage || server
+  const userInfo = {
+    full_name: '',
+    first_name: '',
+    last_name: '',
+    user_email: '',
+    input: '',
+  };
+
+  // Check local storage for user's information
+  function checkLocalStorage() {
+    if (localStorage.getItem('user_info')) {
+      const userDetail = JSON.parse(localStorage.getItem('user_info'));
+      fullName.value = userDetail.full_name;
+      userInput.value = userDetail.input;
+      firstName.value = userDetail.first_name;
+      lastName.value = userDetail.last_name;
+      email.value = userDetail.user_email;
+    }
+  }
+  checkLocalStorage();
+
+  // Update or Set values for the Local Storage
+  function getUserData() {
+    userInfo.full_name = fullName.value;
+    userInfo.first_name = firstName.value;
+    userInfo.last_name = lastName.value;
+    userInfo.user_email = email.value;
+    userInfo.input = userInput.value;
+    localStorage.setItem('user_info', JSON.stringify(userInfo));
+  }
+
+  // Using Event listner on all input elements for values
+  inputs.forEach((input) => {
+    input.addEventListener('keyup', () => {
+      getUserData();
+    });
+  });
 });
