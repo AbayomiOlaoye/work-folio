@@ -183,4 +183,25 @@ document.addEventListener('DOMContentLoaded', () => {
       MODAL_INFO.style.display = 'none';
     }
   });
+
+  // Form Validation
+  const form = document.querySelector('.form');
+  const email = document.querySelector('#email');
+  const error = document.querySelector('.error-index');
+  
+  // Helper functions
+  document.querySelectorAll('button[type=submit]').forEach((submit) => {
+    submit.addEventListener("click", (event) => {
+      if (email.value.trim() !== email.value.toLowerCase()) {
+        error.textContent = "Please check and use lower case";
+        error.style.color = 'red';
+        event.preventDefault();
+        // setTimeout(() => {
+        //   error.textContent = "";
+        // }, 3000);
+      } else {
+        form.submit();
+      }
+    });
+  })
 });
