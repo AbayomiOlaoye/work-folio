@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Using Event listner on all input elements for values
   inputs.forEach((input) => {
-    input.addEventListener('input', () => {
+    input.addEventListener('keyup', () => {
       getUserData();
     });
   });
