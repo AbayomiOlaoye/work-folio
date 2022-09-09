@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.form');
   const email = document.querySelector('#email');
   const error = document.querySelector('.error-index');
- 
+
   // Helper functions
   document.querySelectorAll('button[type=submit]').forEach((submit) => {
     submit.addEventListener('click', (event) => {
