@@ -282,12 +282,6 @@ ul {
   color: #edecff;
   transition: all 200ms ease-in-out;
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
-}
-
-.submit.view.hide {
-  align-content: center;
 }
 
 .view:hover {
@@ -328,7 +322,7 @@ ul {
   color: #191765;
 }
 
-input:focus {
+.full:focus {
   border-color: #5e42d7;
 }
 
