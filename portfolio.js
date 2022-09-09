@@ -249,5 +249,5 @@ document.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('input', () => {
       getUserData();
     });
-  });
+  })
 });
