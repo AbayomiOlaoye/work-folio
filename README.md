@@ -9,7 +9,7 @@ I hope you will be kind enough to give opinions on how to make it better.
 - CSS
 
 ## Live Version 🌍
-Check the deployed version of my responsive portfolio website[here](https://abayomiolaoye.github.io/).
+Check the deployed version of my responsive portfolio website [here](https://abayomiolaoye.github.io/work-folio).
 Feel free to check it out and share your view about it.
 
 ## Getting Started 
