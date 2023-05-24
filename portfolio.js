@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', menuControl);
 const projectInfo = [
   {
     projectID: 'one',
-    projectName: 'Multi-Post Stores',
-    projectSummary: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
+    projectName: 'MathsGuru App',
+    projectSummary: "MathGuru is a fun web app for all fans of mathematics. It is a Single Page App (SPA) that allows users to do simple calculations, and it provides users with great abstraction with its awesomely designed UI. It also offers informative fun by serving users via random Math-related quotes.",
     projectFeaturedImage: './images/placeholder.png',
     altText: 'project snapshot',
-    projectTechnologies: ['css', 'html', 'bootstrap', 'Ruby'],
+    projectTechnologies: ['css', 'html', 'Ruby', 'React'],
     projectLiveLink: '#',
     projectSourceRepo: '#',
   },
